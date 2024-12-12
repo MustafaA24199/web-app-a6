@@ -1,0 +1,26 @@
+<h1>Login</h1>
+<form action="/login" method="POST">
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" name="userName" required>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+
+  <!-- Error Message -->
+  {{#if errorMessage}}
+  <div class="alert alert-danger mt-3">
+    <strong>Error:</strong> {{errorMessage}}
+  </div>
+  {{/if}}
+
+  <!-- Success Message -->
+  {{#if successMessage}}
+  <div class="alert alert-success mt-3">
+    <strong>Success:</strong> {{successMessage}}
+  </div>
+  {{/if}}
+</form>
